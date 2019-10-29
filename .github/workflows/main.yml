@@ -7,6 +7,9 @@ jobs:
     name: Comment From New Issue
     runs-on: ubuntu-latest
     steps:
-      - uses: explooosion/winnie-greet-actions@master
+      - name: Checkout Master
+        uses: actions/checkout@master
+      - name: Use Winnie Greet Actions
+        uses: explooosion/winnie-greet-actions@master
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
