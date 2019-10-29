@@ -1,0 +1,12 @@
+name: Commit Issue Commenter
+
+on: issues
+
+jobs:
+  checkIssue:
+    name: Comment From New Issue
+    runs-on: ubuntu-latest
+    steps:
+      - uses: explooosion/winnie-greet-actions@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
