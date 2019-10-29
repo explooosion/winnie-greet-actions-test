@@ -1,14 +1,14 @@
 name: Commit Issue Commenter
 
-on: issues
+on: 
+  issues:
+    types: opened
 
 jobs:
   checkIssue:
     name: Comment From New Issue
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Master
-        uses: actions/checkout@master
       - name: Use Winnie Greet Actions
         uses: explooosion/winnie-greet-actions@master
         env:
